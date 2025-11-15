@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.CheckBox?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            minHeight="600.0" minWidth="500.0"
+            fx:controller="project.evolution.Presenter.SimulationPresenter">
+    <center>
+        <VBox alignment="CENTER">
+            <Label text="Starting animal amount:"/>
+            <TextField fx:id="startingAnimalAmountFX" promptText="between 1 and 50"/>
+            <Label text="Starting animal energy:"/>
+            <TextField fx:id="startingAnimalEnergyFX" promptText="between 1 and 100000"/>
+            <Label text="Starting plant amount:"/>
+            <TextField fx:id="startingPlantAmountFX" promptText="between 1 and 50"/>
+            <Label text="Map width:"/>
+            <TextField fx:id="widthFX" promptText="between 1 and 25"/>
+            <Label text="Map height:"/>
+            <TextField fx:id="heightFX" promptText="between 1 and 25"/>
+            <Label text="Consumption energy:"/>
+            <TextField fx:id="energyForPlantFX" promptText="between 1 and 100000"/>
+            <Label text="Plants growth rate:"/>
+            <TextField fx:id="everydayPlantAmountFX" promptText="between 1 and 25"/>
+            <Label text="Thriving animal energy:"/>
+            <TextField fx:id="thrivingAnimaEnergyFX" promptText="between 1 and 100000"/>
+            <Label text="Energy spent for breeding:"/>
+            <TextField fx:id="breedingEnergyFX" promptText="between 1 and 100000"/>
+            <Label text="Minimal mutations amount:"/>
+            <TextField fx:id="minMutationsFX" promptText="between 0 and 10"/>
+            <Label text="Maximal mutations amount:"/>
+            <TextField fx:id="maxMutationsFX" promptText="between 0 and 10"/>
+            <Label text="Genotype size:"/>
+            <TextField fx:id="genotypeSizeFX" promptText="between 1 and 10"/>
+            <Label text="Save data to csv file:"/>
+            <TextField fx:id="saveDataFX" promptText="write path ( example: C:\Users\kowal\Desktop\ ) or omit if not anticipated"/>
+            <Label text=" "/>
+            <Label fx:id="notificationFX" text="Type data" textAlignment="CENTER"/>
+            <Label text=" "/>
+            <Button text="Start" onAction="#onSimulationStartClicked"/>
+
+        </VBox>
+    </center>
+
+</BorderPane>
