@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            minHeight="600.0" minWidth="1700.0"
+            fx:controller="project.evolution.Presenter.SimulationPresenter">
+    <left>
+        <VBox alignment="CENTER">
+            <Label text="CHOSEN ANIMAL STATISTICS"/>
+            <Label text=" "/>
+            <Label text="Genotype:"/>
+            <Label fx:id="genotypeFX" text="..." textAlignment="CENTER"/>
+            <Label text="Genotype activated part:"/>
+            <Label fx:id="genotypePartFX" text="..." textAlignment="CENTER"/>
+            <Label text="Energy amount:"/>
+            <Label fx:id="energyFX" text="..." textAlignment="CENTER"/>
+            <Label text="Eaten plants amount:"/>
+            <Label fx:id="eatenPlantsAmountFX" text="..." textAlignment="CENTER"/>
+            <Label text="Children amount:"/>
+            <Label fx:id="childrenAmountFX" text="..." textAlignment="CENTER"/>
+            <Label text="Descendants amount:"/>
+            <Label fx:id="descendantsAmountFX" text="..." textAlignment="CENTER"/>
+            <Label text="Age:"/>
+            <Label fx:id="ageFX" text="..." textAlignment="CENTER"/>
+            <Label text="Death age:"/>
+            <Label fx:id="deathAgeFX" text="..." textAlignment="CENTER"/>
+            <Label text=" "/>
+            <Label text="Animal x coordinate:"/>
+            <TextField fx:id="xFX" promptText="x"/>
+            <Label text="Animal y coordinate:"/>
+            <TextField fx:id="yFX" promptText="y"/>
+            <Label text=" "/>
+            <Button text="Choose" onAction="#onSimulationChooseClicked"/>
+            <Label text="                                                                                                     "/>
+        </VBox>
+    </left>
+    <center>
+        <GridPane fx:id = "mapGrid" gridLinesVisible="true" alignment="CENTER"/>
+    </center>
+    <right>
+        <VBox alignment="CENTER">
+            <Label text="STATISTICS"/>
+            <Label text=" "/>
+            <Label text="Day:"/>
+            <Label fx:id="dayFX" text=" " textAlignment="CENTER"/>
+            <Label text="Animal amount:"/>
+            <Label fx:id="animalsAmountFX" text=" " textAlignment="CENTER"/>
+            <Label text="Plants amount:"/>
+            <Label fx:id="plantsAmountFX" text=" " textAlignment="CENTER"/>
+            <Label text="Empty tiles amount:"/>
+            <Label fx:id="freeTilesAmountFX" text=" " textAlignment="CENTER"/>
+            <Label text="Most popular genotypes:"/>
+            <Label fx:id="mostPopularGenotypeFX" text=" " textAlignment="CENTER"/>
+            <Label text="Average energy of leaving animals:"/>
+            <Label fx:id="averageEnergyFX" text=" " textAlignment="CENTER"/>
+            <Label text="Average age of dead animals:"/>
+            <Label fx:id="deadAnimalsAverageAgeFX" text=" " textAlignment="CENTER"/>
+            <Label text="Average children amount of leaving animals:"/>
+            <Label fx:id="averageChildrenAmountFX" text=" " textAlignment="CENTER"/>
+            <Label text=" "/>
+            <Button fx:id="pauseFX" text="Pause" onAction="#onSimulationPauseClicked"/>
+            <Label text=" "/>
+            <Button fx:id="showEnhancedAnimalsFX" text="Animals with most popular genotype" onAction="#onSimulationEnhancedAnimalsClicked"/>
+            <Label text="                                                                                                     "/>
+
+        </VBox>
+    </right>
+</BorderPane>
